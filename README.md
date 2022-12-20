@@ -1,5 +1,9 @@
 # Visitiing Card Reader
 
+<img src="./public/ss.png" />
+
+<br/>
+
 ## How to Start ?
 
 <br/>
