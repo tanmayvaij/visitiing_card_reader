@@ -9,8 +9,11 @@
 
     <title>Document</title>
 
-    <link rel="stylesheet" href="/static/style.css">
+    <script src='https://unpkg.com/tesseract.js@4.0.1/dist/tesseract.min.js'></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="stylesheet" href="/static/style.css">
+      
 </head>
 
 <body>
@@ -20,11 +23,11 @@
 
             <div id="image" class="bg-white border p-5 w-96 h-[470px] flex flex-col items-center justify-center">
                 <div>
-                    <input onchange="displayImage(event)" class="border w-60 p-3" type="file" name="" accept="image/jpeg">
+                    <input id="imageInput" onchange="displayImage(event)" class="border w-60 p-3" type="file" accept="image/jpeg">
                 </div>
                 <img id="previmg" class="h-[200px] my-4 w-[320px]" src="/static/placeholder.jpg" alt="">
                 <div class="mt-5">
-                    <button class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md mr-3">Upload</button>
+                    <button onclick="uploadImage()" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md mr-3">Upload</button>
                     <button onclick="discardImage()" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md ml-3">Discard</button>
                 </div>
             </div>
@@ -33,28 +36,28 @@
 
                 <div class="flex justify-between items-center">
                     <span class="mr-5 font-medium">Name</span>
-                    <input placeholder="Name" type="text" name="" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
+                    <input id="nameField" placeholder="Name" type="text" name="name" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
                 </div>
                 <div class="flex justify-between items-center">
                     <span class="mr-5 font-medium">Business</span>
-                    <input placeholder="Business" type="text" name="" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
+                    <input id="businessField" placeholder="Business" type="text" name="business" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
                 </div>
                 <div class="flex justify-between items-center">
                     <span class="mr-5 font-medium">Address</span>
-                    <input placeholder="Address" type="text" name="" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
+                    <input id="addressField" placeholder="Address" type="text" name="address" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
                 </div>
                 <div class="flex justify-between items-center">
                     <span class="mr-5 font-medium">Contact no</span>
-                    <input placeholder="Contact no" type="tel" name="" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
+                    <input id="numberField" placeholder="Contact no" type="tel" name="number" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
                 </div>
                 <div class="flex justify-between items-center">
                     <span class="mr-5 font-medium">Product / Service</span>
-                    <input placeholder="Product / Service" type="text" name="" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
+                    <input id="productField" placeholder="Product / Service" type="text" name="product" class="p-3 text-sm border-b-2 border-b-gray-300 !outline-none focus:border-b-blue-400">
                 </div>
 
                 <div class="flex justify-around m-4 mt-8">
                     <button class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md">Save</button>
-                    <button class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md">Clear</button>
+                    <button onclick="clearAll()" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-2 rounded-md">Clear</button>
                 </div>
 
                 <hr class="my-10">

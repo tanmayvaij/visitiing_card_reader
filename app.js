@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
     res.status(200).render("index")
 })
 
+app.post("/save", (req, res) => {
+    
+})
+
 app.listen(5000, () => {
     console.log("App started successfully")
 })
