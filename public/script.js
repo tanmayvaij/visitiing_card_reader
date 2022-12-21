@@ -1,8 +1,11 @@
+// production root url
+const prod_url = "https://visitingcardreader-production.up.railway.app"
+
 // Fetching data from database
 let dbData
 
 async function readDB() {
-    const res = await fetch("http://127.0.0.1:5000/read")
+    const res = await fetch(`${prod_url}/read`)
     const data = await res.json()
     dbData = data
 }
@@ -104,7 +107,7 @@ async function saveData() {
         })
     }
 
-    const res = await fetch("http://127.0.0.1:5000/save", options)    
+    const res = await fetch(`${prod_url}/save`, options)    
 
     const data = await res.json()
 
