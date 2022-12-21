@@ -2,6 +2,8 @@ const express = require("express")
 const path = require("path")
 const sqlite3 = require('sqlite3').verbose();
 
+const PORT = process.env.PORT || 5000
+
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
@@ -64,6 +66,6 @@ app.get("/read", (req, res) => {
 
 })
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log("App started successfully at http://127.0.0.1:5000")
 })
