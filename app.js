@@ -67,5 +67,5 @@ app.get("/read", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log("App started successfully at http://127.0.0.1:5000")
+    console.log(`App started successfully at http://127.0.0.1:${PORT}`)
 })
