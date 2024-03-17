@@ -67,5 +67,5 @@ app.get("/read", (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log('App started successfully at https://visitingcardreader-production.up.railway.app')
+    console.log('App started successfully at port 5000')
 })
